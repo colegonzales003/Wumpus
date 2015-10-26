@@ -21,29 +21,55 @@ public:
 	//void printGrid();
 };
 
+
+
+int calcDist(position player, position wumpus);
+
 class Player
 {
 public:
 	Player();
 
+
+
 	position myPos;
 
 	void movement();
 
-	void checkPos();
+	//void checkPos(Player myPos, Wumpus hisPos, Pit fallyPos, Gold goalPos);
 
 	bool alive;
 
-	//bool hasGold;
+	bool hasGold;
 
-	//bool hasArrow;
+	bool hasArrow;
 
-	//void fireArrow();
+	//void fireArrow()
+	//{
+	//	position arrowTarget;
+	//}
+
 };
 
 class Wumpus
 {
 public:
+	Wumpus();
 	position hisPos;
 	bool alive;
+	//void playerEaten();
+};
+
+class Pit
+{
+public:
+	Pit();
+	position fallyPos;
+	void playerDeath();
+};
+
+class Gold
+{
+	Gold();
+	position goalPos;
 };

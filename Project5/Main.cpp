@@ -24,15 +24,20 @@ int main()
 	cell = new Cell[16];
 	genGrid(4, cell);
 	Player bob;
-
+	Wumpus ogre;
 	bob.alive = true;
+	ogre.alive = true;
 
 	while (bob.alive == true)
 	{
 		bob.movement();
 
+		//if (calcDist(bob.myPos, ogre.hisPos) <= 2)
+		//{
+		//	cout << "DEAD\n\n";
+		//}
+
+		// If statement for wumpus.
+
 	}
-
-	system("pause");
-
 }
